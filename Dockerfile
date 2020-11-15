@@ -28,5 +28,6 @@ LABEL maintainer="Remo Gloor"
 
 COPY --from=go-builder /tmp/openresty/ /usr/local/openresty/lualib/resty/
 COPY bootstrap.sh /usr/local/openresty/bootstrap.sh
+RUN chmod 755 /usr/local/openresty/bootstrap.sh
 
 ENTRYPOINT ["/usr/local/openresty/bootstrap.sh"]
