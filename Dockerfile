@@ -17,4 +17,6 @@ RUN apk update \
   && tar -zxf resty-openidc.gz.tar \
   && mkdir openresty \
   && cp -r ledgetech-lua-resty-http*/lib/resty/* openresty/ \
-  && 
+  && cp -r bungle-lua-resty-session*/lib/resty/* openresty/ \
+  && cp -r cdbattags-lua-resty-jwt*/lib/resty/* openresty/ \
+  && cp -r zmartzone-lua-resty-openidc*/lib/resty/* openresty/ 
