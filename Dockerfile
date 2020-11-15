@@ -23,5 +23,7 @@ RUN apk update \
   
 FROM openresty/openresty:alpine
 
+LABEL maintainer="Remo Gloor"
+
 COPY --from=go-builder /tmp/openresty/* /usr/local/openresty/lualib/resty/
 
