@@ -15,4 +15,6 @@ RUN apk update \
   && tar -zxf lua-resty-session.gz.tar \ 
   && tar -zxf lua-resty-jwt.gz.tar \ 
   && tar -zxf resty-openidc.gz.tar \
-  && mkdir openresty
+  && mkdir openresty \
+  && cp -r ledgetech-lua-resty-http*/lib/resty/* openresty/ \
+  && 
