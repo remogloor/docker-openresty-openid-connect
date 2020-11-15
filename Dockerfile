@@ -20,3 +20,8 @@ RUN apk update \
   && cp -r bungle-lua-resty-session*/lib/resty/* openresty/ \
   && cp -r cdbattags-lua-resty-jwt*/lib/resty/* openresty/ \
   && cp -r zmartzone-lua-resty-openidc*/lib/resty/* openresty/ 
+  
+FROM openresty/openresty:alpine
+
+COPY --from=go-builder /tmp/openresty/* /usr/local/openresty/lualib/resty/
+
